@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CodeMaster Quiz</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div id="start-screen">
+      <h1>🚀 CodeMaster Quiz</h1>
+      <p class="subtitle">Test your programming knowledge across different technologies</p>
+      
+      <div class="category-wrapper">
+        <label class="category-label">Choose Your Challenge:</label>
+        <select id="category-select">
+          <option value="c">🔧 C Programming</option>
+          <option value="python">🐍 Python</option>
+          <option value="java">☕ Java</option>
+          <option value="frontend">🎨 Frontend Development</option>
+        </select>
+      </div>
+      
+      <button id="start-btn" class="btn">Start Quiz</button>
+    </div>
+
+    <div id="quiz">
+      <div class="progress-bar">
+        <div class="progress-fill" id="progress-fill"></div>
+      </div>
+      <div class="question-counter" id="question-counter">Question 1 of 10</div>
+      <p id="question"></p>
+      <ul id="options"></ul>
+      <div class="quiz-actions">
+        <button id="next-btn" class="btn" disabled>Next Question</button>
+      </div>
+    </div>
+
+    <div id="result">
+      <h2>🎉 Quiz Completed!</h2>
+      <div class="score-circle" id="score-circle">
+        <span id="score-display">0/0</span>
+      </div>
+      <div class="score-display">
+        Your Score: <span id="score">0</span> out of <span id="total">0</span>
+        <div id="performance-message"></div>
+      </div>
+      <button id="restart-btn" class="btn">Take Another Quiz</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
